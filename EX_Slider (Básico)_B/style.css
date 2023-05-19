@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+} 
+.slider{
+    width: 80%; /*define a largura do container do slider*/
+    height: 450px; /*define a altura do container do slider*/
+    overflow: hidden; /*esconde qualquer conteudo que exceda as dimensoes do slider*/
+    position: relative; /*define o contexto do posicionamento para os elementos filhos */
+    margin: auto; /*centraliza o slider */
+    margin-top: 50px; /* afasta o container do topo */
+}
+.slide {
+    width: 100%; /*define a largura do slide p ocupar todo o container do slider*/
+    height: 100%; /*define a altura do slide p ocupar todo o container do slider*/
+    position: absolute; /*permite posicionar os slides dentro do container*/
+    opacity: 0; /*define a opacidade inicial do slide como transparente*/
+    transition: opacity 0.5s ease-in-out;/*adiciona uma transição suave para a propiedade de opacidade
+}

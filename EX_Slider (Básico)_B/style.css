@@ -18,5 +18,44 @@ h1{
     height: 100%; /*define a altura do slide p ocupar todo o container do slider*/
     position: absolute; /*permite posicionar os slides dentro do container*/
     opacity: 0; /*define a opacidade inicial do slide como transparente*/
-    transition: opacity 0.5s ease-in-out;/*adiciona uma transição suave para a propiedade de opacidade
+    transition: opacity 0.5s ease-in-out;/*adiciona uma transição suave para a propiedade de opacidade*/
+}
+.slide img {
+    width: 100%; /*faz com que a imagem ocupe td a largura do slide*/
+    height: 100%; /*faz com que a imagem ocupe td a altura do slide*/
+    object-fit: cover; /*redimensiona a imagem para preencher o espaço disponível no slide*/
+}
+
+.slide.active {
+    opacity: 1; /*define a opacidade do slide ativo com opaco (vísivel)*/
+}
+
+.slide:nth-child(1) {
+    animation: fade 6s infinite ; /*adiciona a animação 'fade' ao primeiro slide*/
+}
+
+.slide:nth-child(2) {
+    animation: fade 6s infinite 2s; /*adiciona a animação fade ao segundo slide com um atraso de 2 segundos*/
+}
+.slide:nth-child(3) {
+    animation: fade 6s infinite 4s; /*adiciona a animação fade ao segundo slide com um atraso de 4 segundos*/
+}
+
+@keyframes fade {
+    0% {
+        opacity: o; /*define a opacidade inicial da animação como transparente*/
+    }
+
+    25% {
+        opacity: 1; /*define a opacidade intermediária da animação como opaco (vísivel)*/
+    }
+
+    75% {
+        opacity: 1; /*define a opacidade intermediária da animação como opaco (vísivel)*/
+    }
+
+    100% {
+        opacity: 0; /*define a opacidade final da animação como transparente*/
+    }
+    
 }

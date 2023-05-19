@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css2?family=Merriweather&display=swap&#39;);
+
+/* *significa tudo*/
+*, *::after, *::before {
+    box-sizing: border-box;
+    scroll-padding-top: 120px; /*permite uma distancia qnd se clica nav a*/
+}
+
+html {
+    font-size: 18px; /*(important) pode ser usado para fazer uma regra prevalecer*/
+    scroll-behavior: smooth; /*permite transição quando ser clica nav a*/
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+/*para tornar site responsivo 1 elemento*/
+img, iframe, video {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem; /*faz ele ser 3x o valor do elemento raiz(html) 3x 18px */
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    position: sticky; /*fixa o menu no topo*/
+    top: 0; /*necessario p sticker funcionar*/
+    padding-bottom: 0.7rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    padding: .5rem .6rem; /*aumenta a área de clique dos elementos nav a */
+    transition: all .8s; /* permite transição suave ao posicionar o mouse sobre*/
+}
+
+nav a:hover {
+    color: rgb(255, 238, 60);
+    background-color: black;
+}
+
+main, section {
+    height: 73vh;
+    display: flex; /*entra nesse caso p que o align items funcione abaixo (deixa flex e div)*/
+    align-items: center; /*alinha texto no vertical*/
+    margin: 0;
+}
+
+.conteudo {
+    width: 90%;
+    margin: auto;/*ajuda a centralizar os 10% que sobra, para desgrudar o texto*/
+    max-width: 800px;/*limitador para nao esticar muito*/
+}
+
+.conteudo h1 {
+    text-transform: uppercase; /*trasforma em mauisculas*/
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem; /*faz ele ser 3x o valor do elemento raiz(html) 3x 18px */
+    margin-bottom: 1rem; /*faz ele ser 1x o valor do elemento raiz (html) 18px */
+}
+
+.conteudo p {
+    line-height: 2rem; /*espaço entre as linhas o paragrafo*/
+}
+
+.cta {
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 600;
+    background-color: rgb(255, 238, 60);
+    padding: 1.15rem 1.8rem;
+    line-height: 5.5rem;
+    color: black;
+    letter-spacing: 3px; /*controla o espaçamento entre as letras */
+    text-transform: uppercase;
+}
+/*pseudo-classe before */
+.cta ::before {
+    content: "+"; /*adiciona o elemento + (via CSS)*/
+    margin-right: 0.8rem;
+}
+
+.verde-agua {
+    background-color: #26ccca;
+    color: white;
+}
+
+#ux {
+    color: white;
+    background-image: url(imagens/h13-background-img-2-min.jpg);
+}
+
+#motion {
+    background-image: url(imagens/h13-background-img-3-min.jpg);
+    background-size: cover; /*ajusta a imagem de fundo ao tamanho do elemento*/
+    background-position-x: center; /*ajusta a posição da imagem*/
+}
+
+#brand {
+    background-image: url(imagens/h13-background-img-4-min.jpg);
+    color: white;
+}
+
+.texto {
+    color: #999;
+}
+
+#print {
+    color: white;
+    background-image: url(imagens/h13-background-img-5-min.jpg);
+    background-size: cover; /*ajusta a imagem de fundo ao tamanho do elemento*/
+    background-position-x: center; /*ajusta a posição da imagem*/
+}
+
+#produto {
+    background-image: url(imagens/h13-background-img-1-min.jpg);
+    background-size: cover; /*ajusra a imagem de fundo ao tamanho do elemento */
+    background-position-x: center; /*ajusta a posição da imagem*/
+}
+
+#produto, #motion, #print {
+    background-attachment: fixed; /*cria o efeito paralaxe*/
+}
+
+.conteudo {
+    width: 50%;
+    max-width: 800px;
+    margin: 0;
+    margin-left: 4rem;
+}
+
+/**/
+/* div wpp*/
+.fixed {
+    position: fixed;
+    /*relativa a view (html todo)*/
+    width: 65px;
+    height: 65px;
+    font-weight: border;
+    bottom: 90px;
+    right: 30px;
+}
+
+.fixed:hover {
+    background-color: green;
+    font-weight: bolder;
+    border-radius: 35px;
+}
+/**/
+/*responsividade*/
+
+/*para telas acima de 768px*/
+@media screen and (min-width:768px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 10vh;
+    }
+
+    .logo {
+        width: 25%;
+    }
+
+    header nav {
+        width: 70%;
+        max-width: 800px;
+    }
+
+    nav a {
+        font-size: 1.1rem; /*aumenta a fonte quando tela maior 768px*/
+        padding: 0.7rem 1.0rem;
+    }
+
+    .conteudo h1{
+        font-size: 5rem;/*aumenta a fonte quando tela maior 768px*/
+        margin: -0.6rem;
+    }
+}
